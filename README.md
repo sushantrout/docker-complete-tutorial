@@ -8,5 +8,5 @@ Install From:-
   https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 ## POSTGRES
-```docker pull postgres:latest```
+`docker pull postgres:latest`
   
