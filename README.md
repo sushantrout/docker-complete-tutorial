@@ -27,9 +27,3 @@ docker logs <container-id>
 docker logs -f <container-id> -- folow the logs
 docker rm <container-id>
 ```
-
-
-
-docker ps | findstr /i "notification"
-docker ps --filter "name=mongo"
-docker ps -a
