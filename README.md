@@ -16,8 +16,9 @@ docker rmi <image-name>
 docker history
 docker inspect image 
 docker search
+docker image prune -> Remove all the unused images in docker.
 ```
-## docker image prune -> Remove all the unused images in docker.
+## Container
 ```
 docker ps
 docker ps -a
