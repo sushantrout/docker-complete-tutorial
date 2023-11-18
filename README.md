@@ -108,3 +108,6 @@ services:
       - /host/path:/container/path
 
 ```
+
+docker tag ubuntu-nginx sushant968/ubuntu-nginx-image
+docker push sushant968/ubuntu-nginx-image
