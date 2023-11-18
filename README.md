@@ -113,85 +113,87 @@ docker tag ubuntu-nginx sushant968/ubuntu-nginx-image
 docker push sushant968/ubuntu-nginx-image
 
 # Dockerfile
-FROM:
+### Dockerfile Instructions
 
-Purpose: Specifies the base image to use for the build.
-Syntax: FROM <image>[:<tag>] [AS <name>]
-WORKDIR:
+1. **FROM:**
+   - **Purpose:** Specifies the base image to use for the build.
+   - **Syntax:** `FROM <image>[:<tag>] [AS <name>]`
 
-Purpose: Sets the working directory for subsequent instructions.
-Syntax: WORKDIR /path/to/directory
-COPY:
+2. **WORKDIR:**
+   - **Purpose:** Sets the working directory for subsequent instructions.
+   - **Syntax:** `WORKDIR /path/to/directory`
 
-Purpose: Copies files from the host machine to the container.
-Syntax: COPY <src>... <dest>
-RUN:
+3. **COPY:**
+   - **Purpose:** Copies files from the host machine to the container.
+   - **Syntax:** `COPY <src>... <dest>`
 
-Purpose: Executes a command during the build process. It is often used to install software or dependencies.
-Syntax: RUN <command>
-EXPOSE:
+4. **RUN:**
+   - **Purpose:** Executes a command during the build process. It is often used to install software or dependencies.
+   - **Syntax:** `RUN <command>`
 
-Purpose: Informs Docker that the container will listen on the specified network ports at runtime.
-Syntax: EXPOSE <port> [<port>/<protocol>...]
-ENV:
+5. **EXPOSE:**
+   - **Purpose:** Informs Docker that the container will listen on the specified network ports at runtime.
+   - **Syntax:** `EXPOSE <port> [<port>/<protocol>...]`
 
-Purpose: Sets environment variables in the image.
-Syntax: ENV <key>=<value>
-CMD:
+6. **ENV:**
+   - **Purpose:** Sets environment variables in the image.
+   - **Syntax:** `ENV <key>=<value>`
 
-Purpose: Provides defaults for an executing container. It can be overridden when running a container.
-Syntax:
-CMD ["executable","param1","param2"] (exec form)
-CMD command param1 param2 (shell form)
-LABEL:
+7. **CMD:**
+   - **Purpose:** Provides defaults for an executing container. It can be overridden when running a container.
+   - **Syntax:**
+     - `CMD ["executable","param1","param2"]` (exec form)
+     - `CMD command param1 param2` (shell form)
 
-Purpose: Adds metadata to the image.
-Syntax: LABEL <key>=<value> [<key>=<value>...]
-USER:
+8. **LABEL:**
+   - **Purpose:** Adds metadata to the image.
+   - **Syntax:** `LABEL <key>=<value> [<key>=<value>...]`
 
-Purpose: Sets the username or UID to use when running the image.
-Syntax: USER <username | UID>[:<group | GID>]
-ADD:
+9. **USER:**
+   - **Purpose:** Sets the username or UID to use when running the image.
+   - **Syntax:** `USER <username | UID>[:<group | GID>]`
 
-Purpose: Similar to COPY but has additional features. It can copy local files, remote files, and extract compressed files.
-Syntax: ADD <src>... <dest>
-ARG:
+10. **ADD:**
+    - **Purpose:** Similar to COPY but has additional features. It can copy local files, remote files, and extract compressed files.
+    - **Syntax:** `ADD <src>... <dest>`
 
-Purpose: Defines a variable that users can pass at build-time to the builder.
-Syntax: ARG <name>[=<default>]
-VOLUME:
+11. **ARG:**
+    - **Purpose:** Defines a variable that users can pass at build-time to the builder.
+    - **Syntax:** `ARG <name>[=<default>]`
 
-Purpose: Creates a mount point for externally mounted volumes or other containers.
-Syntax: VOLUME ["/data"]
-HEALTHCHECK:
+12. **VOLUME:**
+    - **Purpose:** Creates a mount point for externally mounted volumes or other containers.
+    - **Syntax:** `VOLUME ["/data"]`
 
-Purpose: Defines a command to check the health of a container.
-Syntax: HEALTHCHECK [OPTIONS] CMD command
-RUN (shell form):
+13. **HEALTHCHECK:**
+    - **Purpose:** Defines a command to check the health of a container.
+    - **Syntax:** `HEALTHCHECK [OPTIONS] CMD command`
 
-Purpose: Similar to the earlier RUN instruction but uses a shell for executing the command.
-Syntax: RUN command
-SHELL:
+14. **RUN (shell form):**
+    - **Purpose:** Similar to the earlier RUN instruction but uses a shell for executing the command.
+    - **Syntax:** `RUN command`
 
-Purpose: Allows the default shell used for the shell form of commands to be overridden.
-Syntax: SHELL ["executable", "parameters"]
-STOPSIGNAL:
+15. **SHELL:**
+    - **Purpose:** Allows the default shell used for the shell form of commands to be overridden.
+    - **Syntax:** `SHELL ["executable", "parameters"]`
 
-Purpose: Sets the system call signal that will be sent to the container to stop it.
-Syntax: STOPSIGNAL signal
-ONBUILD:
+16. **STOPSIGNAL:**
+    - **Purpose:** Sets the system call signal that will be sent to the container to stop it.
+    - **Syntax:** `STOPSIGNAL signal`
 
-Purpose: Adds a trigger instruction to the image that will be executed at a later time when used as the base for another build.
-Syntax: ONBUILD [INSTRUCTION]
-ENTRYPOINT:
+17. **ONBUILD:**
+    - **Purpose:** Adds a trigger instruction to the image that will be executed at a later time when used as the base for another build.
+    - **Syntax:** `ONBUILD [INSTRUCTION]`
 
-Purpose: Configures a container to run as an executable.
-Syntax: ENTRYPOINT ["executable", "param1", "param2"]
-COPY (with --from):
+18. **ENTRYPOINT:**
+    - **Purpose:** Configures a container to run as an executable.
+    - **Syntax:** `ENTRYPOINT ["executable", "param1", "param2"]`
 
-Purpose: Copies files or directories from another image during the build process.
-Syntax: COPY --from=source <src>... <dest>
-WORKDIR (multiple):
+19. **COPY (with --from):**
+    - **Purpose:** Copies files or directories from another image during the build process.
+    - **Syntax:** `COPY --from=source <src>... <dest>`
 
-Purpose: Allows you to change the working directory multiple times in a single Dockerfile.
-Syntax: WORKDIR /path/to/directory
+20. **WORKDIR (multiple):**
+    - **Purpose:** Allows you to change the working directory multiple times in a single Dockerfile.
+    - **Syntax:** `WORKDIR /path/to/directory`
+
