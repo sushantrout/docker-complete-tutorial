@@ -70,3 +70,4 @@ docker kill 0e0bfe32b9e0
 docker restart 0e0bfe32b9e0
 docker rm bb10a05dafcc
 docker rm -f bb10a05dafcc
+docker commit 6a8267b3e542 ubuntu-nginx
