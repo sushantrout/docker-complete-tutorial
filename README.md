@@ -7,6 +7,7 @@ Install From:-
   Karnel:-
   https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
+## Docker
 Docker is a popular platform used for containerization. It allows developers to package their applications and their dependencies into a standardized unit called a container. Containers are lightweight, isolated, and portable, making it easier to deploy and run applications consistently across different environments.
 
 Here are some key reasons why Docker is widely used:
@@ -20,6 +21,19 @@ Here are some key reasons why Docker is widely used:
 * Scalability: Docker makes it easy to scale applications horizontally by running multiple containers of the same image across different hosts or in a cluster. This allows applications to handle increased traffic and workload by distributing the load across multiple containers.
 
 * Collaboration: Docker simplifies collaboration among developers and teams. Docker images can be shared and distributed through container registries, allowing developers to easily share their applications and collaborate on projects. This promotes consistency and reproducibility across different development environments.
+
+## Docker Engine
+Docker Engine is the runtime that runs and manages containers created with Docker. It's the underlying client-server technology that builds and runs containers. Docker Engine includes the Docker CLI command line interface, and the API which can be used to interact with the Docker daemon.
+
+Docker Engine has three components:
+
+* Server: The Docker daemon, called dockerd, is a persistent process that manages Docker containers and handles container objects.
+
+* REST API: The Docker daemon exposes a REST API for programs to talk to the daemon and instruct it what to do.
+
+* Command Line Interface (CLI): The Docker CLI, docker, is a command line interface that interacts with the Docker daemon through scripting or direct CLI commands. Most of the Docker CLI commands are for creating, managing and removing Docker containers and images.
+
+Docker Engine supports different storage drivers, network interfaces, and plugins, allowing it to be used with a wide variety of operating systems and cloud providers. It's also responsible for Docker's security features like container isolation.
 
 ## Container
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
