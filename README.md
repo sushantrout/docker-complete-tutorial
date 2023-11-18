@@ -21,6 +21,11 @@ Here are some key reasons why Docker is widely used:
 
 * Collaboration: Docker simplifies collaboration among developers and teams. Docker images can be shared and distributed through container registries, allowing developers to easily share their applications and collaborate on projects. This promotes consistency and reproducibility across different development environments.
 
+## Container
+A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
+
+Containers are designed to be portable and consistent across environments. They isolate the software from its surroundings, for example, differences between development
+
 ## Image
 ```
 docker images
