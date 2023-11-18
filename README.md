@@ -124,12 +124,18 @@ ENV VARIABLE_NAME=value
 CMD ["executable", "arg1", "arg2"]
 LABEL key="value"
 USER username
-
-# Additional keywords
 ADD additional-files/ /app/extra
 ARG build_version=default
 VOLUME ["/data"]
 HEALTHCHECK CMD echo "Healthcheck command"
 RUN echo "This is a command in shell form"
 SHELL ["/bin/bash", "-c"]
+
+# Additional instructions
+STOPSIGNAL SIGTERM
+ONBUILD RUN echo "On build trigger"
+ENTRYPOINT ["/bin/bash"]
+COPY --from=builder /app/artifacts /app/final-artifacts
+WORKDIR /app/subdirectory
+
 ```
