@@ -111,3 +111,37 @@ services:
 
 docker tag ubuntu-nginx sushant968/ubuntu-nginx-image
 docker push sushant968/ubuntu-nginx-image
+
+```Dockerfile
+# Dockerfile
+
+# 1. FROM: Specifies the base image to use for the build.
+FROM ubuntu:latest
+
+# 2. WORKDIR: Sets the working directory for subsequent instructions.
+WORKDIR /app
+
+# 3. COPY: Copies files from the host machine to the container.
+COPY . .
+
+# 4. RUN: Executes a command during the build process.
+RUN apt-get update && \
+    apt-get install -y \
+    package1 \
+    package2
+
+# 5. EXPOSE: Informs Docker that the container will listen on the specified network ports at runtime.
+EXPOSE 80
+
+# 6. ENV: Sets environment variables in the image.
+ENV VARIABLE_NAME=value
+
+# 7. CMD: Provides defaults for an executing container.
+CMD ["executable", "arg1", "arg2"]
+
+# 8. LABEL: Adds metadata to the image.
+LABEL key="value"
+
+# 9. USER: Sets the username or UID to use when running the image.
+USER username
+
