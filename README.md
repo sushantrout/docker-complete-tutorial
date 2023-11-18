@@ -68,3 +68,5 @@ service nginx status | service nginx start | service nginx restart | service ngi
 docker stop 0e0bfe32b9e0
 docker kill 0e0bfe32b9e0
 docker restart 0e0bfe32b9e0
+docker rm bb10a05dafcc
+docker rm -f bb10a05dafcc
