@@ -57,7 +57,7 @@ A container is a standard unit of software that packages up code and all its dep
 
 Containers are designed to be portable and consistent across environments. They isolate the software from its surroundings, for example, differences between development
 
-## Image
+## Image/Container
 ```
 docker images
 docker pull ubuntu
@@ -80,4 +80,16 @@ Here are some key points about Docker volumes:
 
 **Data Persistence**: Volumes are used to persist data even if the container is stopped or removed. This is essential for applications that generate or rely on data that should persist beyond the lifespan of a container.
 
+``` docker run -v /host/path:/container/path myimage ```
+
 **Mounting Volumes**: You can mount a volume into a Docker container by specifying it in the docker run command with the -v or --volume option. For example:
+
+``` docker volume create myvolume
+docker run -v myvolume:/container/path myimage ```
+
+**Named Volumes**: Docker also supports named volumes, which are managed by Docker and can be more convenient to use. You can create a named volume with the docker volume create command, and then reference it in your docker run command:
+``` docker volume create myvolume
+docker run -v myvolume:/container/path myimage ```
+
+
+**Docker Compose**: If you are using Docker Compose to define and run multi-container Docker applications, you can specify volumes in your docker-compose.yml file:
