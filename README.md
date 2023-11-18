@@ -99,3 +99,12 @@ docker run -v myvolume:/container/path myimage
 
 
 **Docker Compose**: If you are using Docker Compose to define and run multi-container Docker applications, you can specify volumes in your docker-compose.yml file:
+```
+version: '3'
+services:
+  myservice:
+    image: myimage
+    volumes:
+      - /host/path:/container/path
+
+```
