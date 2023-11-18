@@ -60,13 +60,21 @@ Containers are designed to be portable and consistent across environments. They 
 ## Image
 ```
 docker images
-docker pull postgres
-docker rmi <image-id>
-docker rmi <image-name>
-docker history
-docker inspect image 
-docker search
-docker image prune -> Remove all the unused images in docker.
+docker pull ubuntu
+docker run -it -d ubuntu
+The `docker run` command is used to create and start a Docker container from a Docker image. The `-it`, `-d`, and `ubuntu` are options provided to the `docker run` command.
+
+Here's what each part of the command does:
+
+- `docker run`: This is the command to create and start a new Docker container.
+
+- `-it`: This option stands for interactive mode (`-i`) and allocate a pseudo-TTY (`-t`). This means that you can interact with the container via the command line. 
+
+- `-d`: This option stands for detached mode. When used, Docker will start the container in the background and print the container ID.
+
+- `ubuntu`: This is the name of the Docker image to use to create the container. In this case, it's the official image for Ubuntu.
+
+So, `docker run -it -d ubuntu` will create and start a new Docker container in the background from the Ubuntu image, and it will allow you to interact with it via the command line.
 ```
 ## Container
 ```
