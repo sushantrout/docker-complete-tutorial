@@ -12,26 +12,26 @@ Docker is a popular platform used for containerization. It allows developers to 
 
 Here are some key reasons why Docker is widely used:
 
-* Portability: Docker containers encapsulate the application and its dependencies, including libraries, frameworks, and system tools. This ensures that the application runs consistently across different environments, such as development, testing, and production. Developers can build and test applications locally and then deploy them to any environment without worrying about compatibility issues.
+* **Portability**: Docker containers encapsulate the application and its dependencies, including libraries, frameworks, and system tools. This ensures that the application runs consistently across different environments, such as development, testing, and production. Developers can build and test applications locally and then deploy them to any environment without worrying about compatibility issues.
 
-* Isolation: Docker containers provide a high level of isolation, allowing applications to run independently without interfering with each other. Each container has its own file system, network interfaces, and process space, ensuring that changes made within a container do not affect other containers or the host system. This isolation improves security and stability.
+* **Isolation**: Docker containers provide a high level of isolation, allowing applications to run independently without interfering with each other. Each container has its own file system, network interfaces, and process space, ensuring that changes made within a container do not affect other containers or the host system. This isolation improves security and stability.
 
-* Efficiency: Docker uses a layered file system and image caching, which enables efficient resource utilization. Docker images are built using layers, and if multiple images share the same layers, they are reused, reducing the storage space required. Additionally, containers start quickly because they only need to run the processes defined in the image, rather than booting up an entire operating system.
+* **Efficiency**: Docker uses a layered file system and image caching, which enables efficient resource utilization. Docker images are built using layers, and if multiple images share the same layers, they are reused, reducing the storage space required. Additionally, containers start quickly because they only need to run the processes defined in the image, rather than booting up an entire operating system.
 
-* Scalability: Docker makes it easy to scale applications horizontally by running multiple containers of the same image across different hosts or in a cluster. This allows applications to handle increased traffic and workload by distributing the load across multiple containers.
+* **Scalability**: Docker makes it easy to scale applications horizontally by running multiple containers of the same image across different hosts or in a cluster. This allows applications to handle increased traffic and workload by distributing the load across multiple containers.
 
-* Collaboration: Docker simplifies collaboration among developers and teams. Docker images can be shared and distributed through container registries, allowing developers to easily share their applications and collaborate on projects. This promotes consistency and reproducibility across different development environments.
+* **Collaboration**: Docker simplifies collaboration among developers and teams. Docker images can be shared and distributed through container registries, allowing developers to easily share their applications and collaborate on projects. This promotes consistency and reproducibility across different development environments.
 
 ## Docker Engine
 Docker Engine is the runtime that runs and manages containers created with Docker. It's the underlying client-server technology that builds and runs containers. Docker Engine includes the Docker CLI command line interface, and the API which can be used to interact with the Docker daemon.
 
 Docker Engine has three components:
 
-* Server: The Docker daemon, called dockerd, is a persistent process that manages Docker containers and handles container objects.
+* **Server**: The Docker daemon, called dockerd, is a persistent process that manages Docker containers and handles container objects.
 
-* REST API: The Docker daemon exposes a REST API for programs to talk to the daemon and instruct it what to do.
+* **REST API**: The Docker daemon exposes a REST API for programs to talk to the daemon and instruct it what to do.
 
-* Command Line Interface (CLI): The Docker CLI, docker, is a command line interface that interacts with the Docker daemon through scripting or direct CLI commands. Most of the Docker CLI commands are for creating, managing and removing Docker containers and images.
+* **Command Line Interface (CLI)**: The Docker CLI, docker, is a command line interface that interacts with the Docker daemon through scripting or direct CLI commands. Most of the Docker CLI commands are for creating, managing and removing Docker containers and images.
 
 Docker Engine supports different storage drivers, network interfaces, and plugins, allowing it to be used with a wide variety of operating systems and cloud providers. It's also responsible for Docker's security features like container isolation.
 ## Docker objects
