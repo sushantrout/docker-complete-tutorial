@@ -65,3 +65,6 @@ docker run -it -d --name mycontainer1 -p 80:80 ubuntu
 docker exec -ti mycontainer1 bash
 apt install nginx -y
 service nginx status | service nginx start | service nginx restart | service nginx stop
+docker stop 0e0bfe32b9e0
+docker kill 0e0bfe32b9e0
+docker restart 0e0bfe32b9e0
