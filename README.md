@@ -203,6 +203,6 @@ docker push sushant968/ubuntu-nginx-image
 #### Writing into a container's writable layer requires a storage driver to manage the filesystem. The storage driver provides a union filesystem, using the Linux kernel. This extra abstraction reduces performance as compared to using data volumes, which write directly to the host filesystem.
 
 ## Docker Storage
-*Volumes*
-*Bind Mount*
-*Tmpfs mount*
+**Volumes**
+**Bind Mount**
+**Tmpfs mount**
