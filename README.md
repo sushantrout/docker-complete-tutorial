@@ -197,3 +197,7 @@ docker push sushant968/ubuntu-nginx-image
     - **Purpose:** Allows you to change the working directory multiple times in a single Dockerfile.
     - **Syntax:** `WORKDIR /path/to/directory`
 
+## Docker
+### The data doesn't persist when that container no longer exists, and it can be difficult to get the data out of the container if another process needs it.
+### A container's writable layer is tightly coupled to the host machine where the container is running. You can't easily move the data somewhere else.
+### Writing into a container's writable layer requires a storage driver to manage the filesystem. The storage driver provides a union filesystem, using the Linux kernel. This extra abstraction reduces performance as compared to using data volumes, which write directly to the host filesystem.
