@@ -215,3 +215,5 @@ Bind mounts allow you to mount a directory from the host machine into a containe
 
 **Tmpfs Mount:**
 Docker allows you to mount a tmpfs (temporary filesystem) into a container. Tmpfs is a memory-backed filesystem that does not persist data. It is useful for scenarios where temporary data needs to be stored in memory rather than on disk.
+
+### Volumes
