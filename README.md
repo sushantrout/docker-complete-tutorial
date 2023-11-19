@@ -255,6 +255,7 @@ docker volume ls
 docker volume inspect dibyastore
 docker volume rm dibyastore
 docker volume prune
+docker voulme create dibyastoreRO //Read only
 ```
 
 ```
@@ -287,4 +288,40 @@ docker volume prune
 ### Use Volume inside the container
 ```
 docker run -it -d --name ConA --mount source=volumedibya1,target=/apps ubuntu
+docker container inspect ConA
+docker run -it -d --name ConB --volume volumedibya2:/apps ubuntu
+docker run -it -d --name ConC -v volumedibya2:/apps ubuntu
 ```
+
+### Bind Mount
+Bind mount are not managed by docker and are mapped to a host system directory.
+
+## Docker network
+
+Docker provides a networking feature that allows containers to communicate with each other and with the outside world. Docker networking facilitates communication between containers, container orchestration, and connection to external networks. Here are some key aspects of Docker networking:
+
+**Bridge Network:**
+
+Default network created when Docker is installed.
+Containers on the same bridge network can communicate with each other.
+Containers on different bridge networks are isolated from each other.
+
+**Host Network:**
+
+Containers share the network namespace with the host.
+Containers directly use the host's network stack, and ports are directly mapped without the need for port mapping.
+
+**Overlay Network:**
+
+Used in Docker Swarm for communication between nodes in a swarm.
+Allows containers to communicate across multiple hosts.
+
+**Macvlan Network:**
+
+Assigns a MAC address to each container, making it appear as a physical device on the network.
+Containers can have their IP addresses on the same subnet as the physical network.
+
+**None Network:**
+
+Containers do not have network access.
+Useful when you want to completely isolate a container from network communication.
