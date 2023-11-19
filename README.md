@@ -206,3 +206,12 @@ docker push sushant968/ubuntu-nginx-image
 **Volumes**
 **Bind Mount**
 **Tmpfs mount**
+
+**Volumes:**
+Docker volumes are a way to persist and manage data outside the lifecycle of a container. Volumes are separate from the container filesystem and can be used to share data between containers or persist data even if the container is removed.
+
+**Bind Mount:**
+Bind mounts allow you to mount a directory from the host machine into a container. This means that changes made in the container or on the host are reflected in both places.
+
+**Tmpfs Mount:**
+Docker allows you to mount a tmpfs (temporary filesystem) into a container. Tmpfs is a memory-backed filesystem that does not persist data. It is useful for scenarios where temporary data needs to be stored in memory rather than on disk.
