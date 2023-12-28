@@ -80,6 +80,7 @@ docker ps | findstr con
 docker logs aacfdd040f92
 docker logs aacfdd040f92 --tail 10
 docker logs aacfdd040f92 --tail 10 -f
+docker logs aacfdd040f92 | findstr "error"
 ```
 
 ## Docker Volums
