@@ -76,6 +76,10 @@ docker restart 0e0bfe32b9e0
 docker rm bb10a05dafcc
 docker rm -f bb10a05dafcc
 docker commit 6a8267b3e542 ubuntu-nginx
+docker ps | findstr con
+docker logs aacfdd040f92
+docker logs aacfdd040f92 --tail 10
+docker logs aacfdd040f92 --tail 10 -f
 ```
 
 ## Docker Volums
