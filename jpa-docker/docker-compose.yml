@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgresdb
+    environment:
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  backend:
+    build: .
+    container_name: backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://postgres:5432/mydb
+      - DATASOURCE_USERNAME=myuser
+      - DATASOURCE_PASSWORD=mypassword
+    restart: always
+
+volumes:
+  postgres_data:

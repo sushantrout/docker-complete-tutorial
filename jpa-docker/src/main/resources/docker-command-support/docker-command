@@ -1,0 +1,3 @@
+mvn clean package -DskipTests
+docker-compose -f  ./docker-compose.yml up
+docker exec -it postgresdb psql --u myuser --db mydb

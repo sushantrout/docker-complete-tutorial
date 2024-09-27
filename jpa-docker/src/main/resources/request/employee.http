@@ -1,0 +1,10 @@
+http://localhost:8080/employee/all
+
+###
+POST http://localhost:8080/employee/add
+Content-Type: application/json
+
+{
+    "name": "Arup",
+    "address": "USA"
+}
